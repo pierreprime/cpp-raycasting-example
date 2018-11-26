@@ -10,14 +10,23 @@ A CG library is provided by lodev : quickcg.
 
 ## Build with g++ and run
 
+Install SDL 1.2 following : https://loka.developpez.com/tutoriel/sdl/installation/linux/
+
 With g++ it's quite easy: place all .cpp and .h files of QuickCG in the same directory, put the example code of tutorials in the main.cpp file, and then you can compile it with the following command:
 
 ```
 g++ *.cpp -lSDL -O3
 ```
 
-The -O3 is optional if you want compiler optimization. The -lSDL lets it link to SDL. This requires you to have SDL installed on your distro (look for sdl and sdl-devel packages or similar). 
+The -O3 is optional if you want compiler optimization. The -lSDL lets it link to SDL. This requires you to have SDL installed on your distro (look for sdl and sdl-devel packages or similar).
 
 ## Notes
 
 FastCG includes a FPS counter.
+
+To rotate a vector, we have to multiply it by the rotaton matrix :
+[ cos(a) - sin(a) ]
+[ sin(a) cos(a) ]
+
+When rotating input keys, value of dir and plane change, but remain perpentdicular and with same length.
+Direction of ray is sum of direction vector and part of the plane vector
