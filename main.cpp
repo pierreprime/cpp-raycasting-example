@@ -8,6 +8,9 @@ All rights reserved.
 #include <vector>
 #include <iostream>
 
+// JSON parsing lib
+#include "json-c/json_tokener.h"
+
 #include "quickcg.h"
 using namespace QuickCG;
 using namespace std;
@@ -58,7 +61,7 @@ int main(int /*argc*/, char */*argv*/[])
   double time = 0;
   double oldTime = 0;
 
-  screen(512, 384, "Raycaster");
+  screen(640, 480, "Raycaster");
 
   // game loop
   while (!done()) {

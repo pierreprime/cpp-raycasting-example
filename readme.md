@@ -30,3 +30,13 @@ To rotate a vector, we have to multiply it by the rotaton matrix :
 
 When rotating input keys, value of dir and plane change, but remain perpentdicular and with same length.
 Direction of ray is sum of direction vector and part of the plane vector
+
+## Resolutions
+
+Atari ST resolutions : 16colors@320x200 // 4colors@640x200 // BW@640x400
+Target PC resolution : 640x480 (use 80 extra height for extra infos)
+
+## Build and libs
+
+Either do a makefile with system link to installed C/C++ libraries
+Or add sources and headers to project for portability
