@@ -40,3 +40,4 @@ Target PC resolution : 640x480 (use 80 extra height for extra infos)
 
 Either do a makefile with system link to installed C/C++ libraries
 Or add sources and headers to project for portability
+JSON for modern C++ lib : https://github.com/nlohmann/json

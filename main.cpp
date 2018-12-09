@@ -7,13 +7,17 @@ All rights reserved.
 #include <string>
 #include <vector>
 #include <iostream>
-
-// JSON parsing lib
-#include "json-c/json_tokener.h"
+#include <iomanip>
+#include <fstream>
+#include <nlohmann/json.hpp>
+// C++ equivalent of associative array
+#include <unordered_map>
 
 #include "quickcg.h"
+
 using namespace QuickCG;
 using namespace std;
+using json = nlohmann::json;
 
 //place the example code below here:
 #define mapWidth 24
@@ -49,7 +53,11 @@ int worldMap[mapWidth][mapHeight] =
 
 int main(int /*argc*/, char */*argv*/[])
 {
-  // position vector of player
+	// load stream from JSON level file
+	//std::ifstream fileStream("levels/001.json", std::ifstream::binary);
+	//json myJsonObject;
+	//myJsonObject << fileStream;
+	// position vector of player
   double posX = 22, posY = 12;
   // ratio between length of direction and camera plane determines FOV. Here the FOV is 66°
   // initial direction vector
